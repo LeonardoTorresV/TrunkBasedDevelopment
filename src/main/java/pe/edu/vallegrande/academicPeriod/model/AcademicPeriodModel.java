@@ -19,4 +19,10 @@ public class AcademicPeriodModel {
     private String shift;
     private String cluster;
     private String status; // Active or Inactive
+
+    public AcademicPeriodModel() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        this.startDate = LocalDate.now().format(formatter);
+        this.endDate = LocalDate.now().format(formatter);
+    }
 }
